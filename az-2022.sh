@@ -21,14 +21,14 @@ function goto
 
 clear
 
-echo "Script by fb.com/thuong.hai.581 (PRO VIP)"
-echo "Repo: https://github.com/kmille36/Windows-11-VPS"
+echo "Script by @?"
+echo "Repo: @?"
 
 goto step1
 : step1
 clear
-echo "Script by fb.com/thuong.hai.581"
-echo "Repo: https://github.com/kmille36/Windows-11-VPS"
+echo "@?"
+echo "Repo: @?"
 
 echo "    _     ______   _ ____  _____ "
 echo "   / \   |__  / | | |  _ \| ____|"
@@ -57,8 +57,8 @@ esac
 goto step2
 : step2
 clear
-echo "Script by fb.com/thuong.hai.581"
-echo "Repo: https://github.com/kmille36/Windows-11-VPS"
+echo "Script by f@"
+echo "Repo: @S"
 
 echo "Windows Server 2022 Datacenter" > abc; echo MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest > win 
 
@@ -66,8 +66,8 @@ echo "Windows Server 2022 Datacenter" > abc; echo MicrosoftWindowsServer:Windows
 goto step3
 : step3
 clear
-echo "Script by fb.com/thuong.hai.581"
-echo "Repo: https://github.com/kmille36/Windows-11-VPS"
+echo "S?"
+echo "Repo: @S"
 
 echo "    _     ______   _ ____  _____ "
 echo "   / \   |__  / | | |  _ \| ____|"
@@ -113,7 +113,7 @@ echo "🖥️  Creating In Process..."
 location=$(cat vm)
 image=$(cat win)
 size=$(cat size)
-rs=$(cat rs) && az vm create --resource-group $rs --name Windows-VM-PLUS --image $image --public-ip-sku Standard --size $size --location $location --admin-username azureuser --admin-password WindowsPassword@001 --nic-delete-option delete --os-disk-delete-option delete --out table
+rs=$(cat rs) && az vm create --resource-group $rs --name TD3312 --image $image --public-ip-sku Standard --size $size --location $location --admin-username Namkunbg --admin-password 1234t6Hi@@// --nic-delete-option delete --os-disk-delete-option delete --out table
 
 
 # : test
@@ -147,10 +147,10 @@ echo "Open all ports on a VM to inbound traffic"
 az vm open-port --resource-group $rs --name Windows-VM-PLUS --port '*' --output none
 
 echo " Done! "
-IP=$(az vm show -d -g $rs -n Windows-VM-PLUS --query publicIps -o tsv)
+IP=$(az vm show -d -g $rs -n TD-3312 --query publicIps -o tsv)
 echo "Public IP: $IP"
-echo "Username: azureuser"
-echo "Password: WindowsPassword@001"
+echo "Username: Namkunbg"
+echo "Password: 123456Hi@@//"
 
 echo "🖥️  Run Command Setup Internet In Process... (10s)"
 
