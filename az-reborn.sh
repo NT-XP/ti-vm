@@ -21,14 +21,14 @@ function goto
 
 clear
 
-echo "Script by @?"
-echo "Repo: @?"
+echo "Script by fb.com/thuong.hai.581 (PRO VIP)"
+echo "Repo: https://github.com/kmille36/Windows-11-VPS"
 
 goto step1
 : step1
 clear
-echo "Script @?"
-echo "Repo: @?"
+echo "Script by fb.com/thuong.hai.581"
+echo "Repo: https://github.com/kmille36/Windows-11-VPS"
 
 echo "    _     ______   _ ____  _____ "
 echo "   / \   |__  / | | |  _ \| ____|"
@@ -57,8 +57,8 @@ esac
 goto step2
 : step2
 clear
-echo "Script by ?"
-echo "Repo: @?"
+echo "Script by fb.com/thuong.hai.581"
+echo "Repo: https://github.com/kmille36/Windows-11-VPS"
 
 echo "    _     ______   _ ____  _____ "
 echo "   / \   |__  / | | |  _ \| ____|"
@@ -93,8 +93,8 @@ esac
 goto step3
 : step3
 clear
-echo "Script by @?"
-echo "Repo: @?"
+echo "Script by fb.com/thuong.hai.581"
+echo "Repo: https://github.com/kmille36/Windows-11-VPS"
 
 echo "    _     ______   _ ____  _____ "
 echo "   / \   |__  / | | |  _ \| ____|"
@@ -133,14 +133,14 @@ nohup bash webapp.sh  &>/dev/null &
 goto checkvm
 : checkvm
 echo "⌛  Checking Previous VM..."
-az vm list-ip-addresses -n TD-3312 --output tsv > IP.txt 
+az vm list-ip-addresses -n Windows-VM-PLUS --output tsv > IP.txt 
 [ -s IP.txt ] && bash -c "echo You Already Have Running VM... && az vm list-ip-addresses -n Windows-VM-PLUS --output table" && goto ask
 
 echo "🖥️  Creating In Process..."
 location=$(cat vm)
 image=$(cat win)
 size=$(cat size)
-rs=$(cat rs) && az vm create --resource-group $rs --name TD3312 --image $image --public-ip-sku Standard --size $size --location $location --admin-username Namkunbg --admin-password 123456Hi@@// --nic-delete-option delete --os-disk-delete-option delete --out table
+rs=$(cat rs) && az vm create --resource-group $rs --name Windows-VM-PLUS --image $image --public-ip-sku Standard --size $size --location $location --admin-username Namkunbg --admin-password 123456HI@@// --nic-delete-option delete --os-disk-delete-option delete --out table
 
 
 # : test
@@ -174,10 +174,10 @@ echo "Open all ports on a VM to inbound traffic"
 az vm open-port --resource-group $rs --name Windows-VM-PLUS --port '*' --output none
 
 echo " Done! "
-IP=$(az vm show -d -g $rs -n TD-3312 --query publicIps -o tsv)
+IP=$(az vm show -d -g $rs -n Windows-VM-PLUS --query publicIps -o tsv)
 echo "Public IP: $IP"
-echo "Username: Namkunbg"
-echo "Password: 123456Hi@@//"
+echo "Username: azureuser"
+echo "Password: WindowsPassword@001"
 
 echo "🖥️  Run Command Setup Internet In Process... (10s)"
 
@@ -245,7 +245,7 @@ do
                   az webapp delete --name $web --resource-group $rs 2>nul
                   az appservice plan delete --name $app --resource-group $rs --yes 2>nul
                   RESOURCE_GROUP=$rs
-                  VM_NAME=Windows-VM-PLUS
+                  VM_NAME=TD-312
 
                   INTERFACE_ID=$(az vm show --resource-group ${RESOURCE_GROUP} --name ${VM_NAME} --query networkProfile.networkInterfaces[0].id)
                   INTERFACE_ID=${INTERFACE_ID:1: -1}
